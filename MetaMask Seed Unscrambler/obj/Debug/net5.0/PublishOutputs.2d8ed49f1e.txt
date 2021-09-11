@@ -1,0 +1,26 @@
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/MetaMask Seed Unscrambler
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/MetaMask Seed Unscrambler.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/MetaMask Seed Unscrambler.deps.json
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/MetaMask Seed Unscrambler.runtimeconfig.json
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/MetaMask Seed Unscrambler.pdb
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Common.Logging.Core.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Microsoft.Extensions.Logging.Abstractions.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/NBitcoin.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/NBitcoin.Secp256k1.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.ABI.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.Accounts.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.BlockchainProcessing.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.Contracts.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.HdWallet.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.Hex.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.JsonRpc.Client.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.JsonRpc.RpcClient.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.KeyStore.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.Model.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.RLP.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.RPC.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.Signer.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.Util.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Nethereum.Web3.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/Newtonsoft.Json.dll
+/home/ethan/Documents/Programmming/MetaMask Seed Unscrambler/bin/Debug/net5.0/publish/BouncyCastle.Crypto.dll
