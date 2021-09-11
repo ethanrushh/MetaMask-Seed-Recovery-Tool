@@ -12,3 +12,11 @@ Enjoy!
 To run, you need to first create your seed text document. Place your twelve words in here, with a space inbetween each word. The words MUST be one single line.
 Run the application by executing:
 `./MetaMask\ Seed\ Unscrambler <scrambled seed phrase file location> <target address>`
+
+# Donations
+If you find this program useful, please consider chipping me a little bit of your recovered coin...
+
+### BSC/ETH/MATIC
+0x2F50B7A73D7065a672bB0eb97fB4e3DAb391CC23
+
+Thanks!
