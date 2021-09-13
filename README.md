@@ -10,7 +10,7 @@ Enjoy!
 # What this *can* do
 If you've got a scrambled seed phrase (meaning out of order), this can help. Sometimes, MetaMask will internally store a corrupted version of your seed phrase. I've seen it happen, and I'm sure it will happen again. If that happens, this probably can help. This is also useful if you wrote down your seed phrase in the wrong order, which I've also seen happen.
 
-# What this can *not* do
+# What this *can't* do
 If you've got the wrong words in your seed phrase, nobody can help with that. A lost seed phrase is a lost seed phrase. Maybe brute forcing with GPU acceleration is possible, but its a dire effort and you've probably lost your funds. This program can not help with flat out incorrect words.
 
 # Usage:
