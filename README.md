@@ -20,7 +20,7 @@ Run the application by executing:
 `./MetaMask\ Seed\ Unscrambler <scrambled seed phrase file location> <target address>`
 
 ### Windows
-Sorry, but I refuse to use Windows for development unless someone is threatening me with a fate worse than death. If you need to use Windows to run this program, you'll need to compile it yourself. Open it up in Visual Studio Code and restore the NuGet packages. Its not too difficult.
+Sorry, but I refuse to use Windows for development unless someone is threatening me with a fate worse than death. If you need to use Windows to run this program, you'll need to compile it yourself. Open it up in Visual Studio Code and restore the NuGet packages. It's not too difficult.
 
 ### MacOS
 I haven't compiled this for MacOS purely because I don't have access to a Mac at the moment. The same steps can be applied here as Windows.
