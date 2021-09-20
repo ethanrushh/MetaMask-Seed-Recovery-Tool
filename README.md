@@ -7,6 +7,9 @@ There is currently no multithreading because I'm lazy, however if I get a reques
 
 Enjoy!
 
+### Notice:
+I've seen some people that are concerned about security and entering their seed phrases into this program. This program NEVER communicates with any servers or connects to anything online. All processing and outputs are handled on your device, so I never have any chance to see your phrase. If you still feel uncomfortable, feel free to look at the source code.
+
 # What this *can* do
 If you've got a scrambled seed phrase (meaning out of order), this can help. Sometimes, MetaMask will internally store a corrupted version of your seed phrase. I've seen it happen, and I'm sure it will happen again. If that happens, this probably can help. This is also useful if you wrote down your seed phrase in the wrong order, which I've also seen happen.
 
