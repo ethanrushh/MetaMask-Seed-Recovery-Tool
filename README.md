@@ -3,7 +3,7 @@ A tool for descrambling a MetaMask, Trust Wallet or any other 12-word BIP39 HD S
 
 Although this is only built for Linux (my host OS), this can be run on anything that supports Omnisharp and VSCode. Yes, this includes Windows and MacOS (with a huge asterisk).
 
-There is currently no multithreading because I'm lazy, however if I get a request to add support for it to speed up unscrambling, let me know and I'll be happy to do so.
+There is currently no multithreading because I'm lazy, however if I get a request to add support for it to speed up unscrambling, let me know and I'll be happy to do so. If I get some donations then maybe I'll even put in the time to get GPU acceleration working to add support for replacing one or two words...
 
 Enjoy!
 
