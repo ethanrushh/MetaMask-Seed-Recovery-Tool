@@ -28,7 +28,7 @@ https://www.youtube.com/watch?v=hx17Txa2_jk
 ### Windows
 I've now built this for Windows too! Believe me, I didn't want to...
 
-To run it, use the exact same steps as Linux but in your Windows shell. I'd suggest using the same tutorial as Linux, however I can't promise it'll work exactly the same. In theory, it should be identical. You may need to use Windows Powershell whenever I talk about the 'terminal' however.
+To run it, use the exact same steps as Linux but in your Windows shell. I'd suggest using the same tutorial as Linux, however I can't promise it'll work exactly the same. In theory, it should be identical. You may need to use Windows Powershell whenever I talk about the 'terminal'.
 
 ### MacOS
 I haven't compiled this for MacOS because I haven't dug up my old iMac in a while and it doesn't have the applications installed that I need to compile this, and I haven't found it necessary. If you need this compiled for mac, either drop me a message or compile it yourself using Visual Studio Code or similar. Be careful of the NuGet package dependencies.
