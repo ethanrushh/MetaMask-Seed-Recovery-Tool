@@ -22,13 +22,16 @@ To run, you need to first create your seed text document. Place your twelve word
 Run the application by executing:
 `./MetaMask\ Seed\ Unscrambler <scrambled seed phrase file location> <target address>`
 
+#### Tutorial:
 https://www.youtube.com/watch?v=hx17Txa2_jk
 
 ### Windows
-Sorry, but I refuse to use Windows for development unless someone is threatening me with a fate worse than death. If you need to use Windows to run this program, you'll need to compile it yourself. Open it up in Visual Studio Code and restore the NuGet packages. It's not too difficult.
+I've now built this for Windows too! Believe me, I didn't want to...
+
+To run it, use the exact same steps as Linux but in your Windows shell. I'd suggest using the same tutorial as Linux, however I can't promise it'll work exactly the same. In theory, it should be identical. You may need to use Windows Powershell whenever I talk about the 'terminal' however.
 
 ### MacOS
-I haven't compiled this for MacOS purely because I don't have access to a Mac at the moment. The same steps can be applied here as Windows.
+I haven't compiled this for MacOS because I haven't dug up my old iMac in a while and it doesn't have the applications installed that I need to compile this, and I haven't found it necessary. If you need this compiled for mac, either drop me a message or compile it yourself using Visual Studio Code or similar. Be careful of the NuGet package dependencies.
 
 # Donations
 If you find this program useful, please consider chipping me a little bit of your recovered coin...
