@@ -54,9 +54,7 @@ public class Program
                     Environment.Exit(0);
                 }
             }
-            catch {
-                return;
-            }
+            catch {}
         });
 
         Console.WriteLine("Words do not match any possible wallet attempt");

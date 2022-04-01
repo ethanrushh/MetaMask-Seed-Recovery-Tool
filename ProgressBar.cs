@@ -39,7 +39,7 @@ public class ProgressBar : IDisposable, IProgress<double> {
 			if (disposed) return;
 
 			int progressBlockCount = (int) (currentProgress * blockCount);
-			double percent = Math.Truncate(currentProgress * 1000) / 100;
+			double percent = Math.Truncate(currentProgress * 10000) / 100;
 			string text = string.Format("[{0}{1}] {2,3}% {3}",
 				new string('#', progressBlockCount), new string('-', blockCount - progressBlockCount),
 				percent,
