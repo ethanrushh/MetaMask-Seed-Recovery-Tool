@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Numerics;
-using Nethereum.Web3;
-using Nethereum.Web3.Accounts;
-using Nethereum.Util;
-using System.Threading.Tasks;
-using NBitcoin;
-using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.HdWallet;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 public class Program
 {
+    public static int currentProgress = 0;
+    
     private static void Main(string[] args)
     {
+        new Thread(UpdateProgress).Start();
+        
         string words = "";
         string targetAddress = "";
 
@@ -32,7 +29,9 @@ public class Program
 
         Console.WriteLine("Beginning descramble attempt. This may take a very long time (up to an hour or more depending on your system). Do not switch off your system or close the application while this program is running, or you'll have to start all over agian.");
 
-        Permute<string>(words.Split(' '), perm => {
+        Permute<string>(words.Split(' '), perm =>
+        {
+            currentProgress++;
             StringBuilder builder = new StringBuilder();
 
             foreach (string strt in perm)
@@ -61,6 +60,18 @@ public class Program
         });
 
         Console.WriteLine("Words do not match any possible wallet attempt");
+        Environment.Exit(0);
+    }
+
+    private static void UpdateProgress()
+    {
+        ProgressBar progressBar = new ProgressBar();
+        while (true)
+        {
+            progressBar.Report((double)currentProgress / 479001600);
+            
+            Thread.Sleep(16);
+        }
     }
 
     private static void ValidateMnemonicList(IEnumerable<string> words) {
@@ -114,7 +125,7 @@ public class Program
                 }
                 else
                 {
-                    output(permutation);
+                    new Thread(() => output(permutation)).Start();
                 }
 
                 used[i] = false;
