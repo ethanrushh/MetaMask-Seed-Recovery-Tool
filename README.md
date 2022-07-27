@@ -1,3 +1,6 @@
+# V2 IS HERE!
+I am planning to update this README now but note that it is out of date! Follow the instructions on the GUI and read carefully. The below documentation (except for the donation address) is all out of date. Good luck!
+
 # MetaMask Seed Unscrambler
 A tool for descrambling a MetaMask, Trust Wallet or any other 12-word BIP39 HD Seed Phrase and/or Finding the Private Key. Be careful when you use this program, and understand it might work for you and it might not, I won't know. You're using this at your own risk (which is minimal). It was helpful for me, so I decided to publish it for people with the same potential problem.
 
