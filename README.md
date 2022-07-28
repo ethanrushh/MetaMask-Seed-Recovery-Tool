@@ -1,6 +1,14 @@
 # V2 IS HERE!
 I am planning to update this README now but note that it is out of date! Follow the instructions on the GUI and read carefully. The below documentation (except for the donation address) is all out of date. Good luck!
 
+# V2 - MacOS USERS:
+Sorry to say but the build won't run on modern versions of MacOS. If you're running a fairly modern Mac then you'll need to run this code from source using dotnet run. To run, make sure you have the dotnet 6.x SDK installed, download the source code from this page then run:
+
+`dotnet restore`
+`dotnet run`
+
+from the project folder. If you've done it right, after a few seconds you'll see the program start and you can start using it as normal.
+
 # MetaMask Seed Unscrambler
 A tool for descrambling a MetaMask, Trust Wallet or any other 12-word BIP39 HD Seed Phrase and/or Finding the Private Key. Be careful when you use this program, and understand it might work for you and it might not, I won't know. You're using this at your own risk (which is minimal). It was helpful for me, so I decided to publish it for people with the same potential problem.
 
