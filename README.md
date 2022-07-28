@@ -1,14 +1,14 @@
 # V2 IS HERE!
 I am planning to update this README now but note that it is out of date! Follow the instructions on the GUI and read carefully. The below documentation (except for the donation address) is all out of date. Good luck!
 
-# V2 - MacOS USERS:
-~~Sorry to say but the build won't run on modern versions of MacOS. If you're running a fairly modern Mac then you'll need to run this code from source using dotnet run. To run, make sure you have the dotnet 6.x SDK installed, download the source code from this page then run:
+~~# V2 - MacOS USERS:~~
+~~Sorry to say but the build won't run on modern versions of MacOS. If you're running a fairly modern Mac then you'll need to run this code from source using dotnet run. To run, make sure you have the dotnet 6.x SDK installed, download the source code from this page then run:~~
 
-`dotnet restore`
-then
-`dotnet run`
+~~`dotnet restore`~~
+~~then~~
+~~`dotnet run`~~
 
-from the project folder. If you've done it right, after a few seconds you'll see the program start and you can start using it as normal.~~
+~~from the project folder. If you've done it right, after a few seconds you'll see the program start and you can start using it as normal.~~
 
 To run the binary on MacOS, you need to disable some security features. If you don't wish to do so, use the above method. If you're okay with enabling running unsigned code (which in my opinion is an extremely minimal security issue) then open a new Terminal and run:
 
