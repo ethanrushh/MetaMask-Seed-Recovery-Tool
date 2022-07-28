@@ -42,11 +42,11 @@ namespace Avalonia.MetaMaskRecoverer
         
         private async void ValidateSeedPhrase_Clicked(object? sender, RoutedEventArgs e)
         {
-            if (TbSeedPhrase is null)
+            if (TbSeedPhrase.Text is null)
                 return;
             if (TbSeedPhrase!.Text is "")
                 return; // TODO Popup
-            
+
             if (!File.Exists(WordsPath))
                 throw new Exception(
                     "You are missing a necessary file for this to run. Please check that the BIP39 Words.txt is in the same directory as the program this is being run from or in the same path if explicitly specified");
@@ -75,6 +75,7 @@ namespace Avalonia.MetaMaskRecoverer
             BtCheckValidity.Content = preContent;
         }
 
-        private static bool VerifyAllExist(IEnumerable<string> wordList, params string[] words) => words.All(wordList.Contains);
+        private static bool VerifyAllExist(IEnumerable<string> wordList, params string[] words) => ValidPhraseLength(words) && words.All(wordList.Contains);
+        private static bool ValidPhraseLength(string[] words) => words.Length is 12 or 15 or 18 or 21 or 24;
     }
 }
