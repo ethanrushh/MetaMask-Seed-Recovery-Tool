@@ -2,13 +2,25 @@
 I am planning to update this README now but note that it is out of date! Follow the instructions on the GUI and read carefully. The below documentation (except for the donation address) is all out of date. Good luck!
 
 # V2 - MacOS USERS:
-Sorry to say but the build won't run on modern versions of MacOS. If you're running a fairly modern Mac then you'll need to run this code from source using dotnet run. To run, make sure you have the dotnet 6.x SDK installed, download the source code from this page then run:
+~~Sorry to say but the build won't run on modern versions of MacOS. If you're running a fairly modern Mac then you'll need to run this code from source using dotnet run. To run, make sure you have the dotnet 6.x SDK installed, download the source code from this page then run:
 
 `dotnet restore`
 then
 `dotnet run`
 
-from the project folder. If you've done it right, after a few seconds you'll see the program start and you can start using it as normal.
+from the project folder. If you've done it right, after a few seconds you'll see the program start and you can start using it as normal.~~
+
+To run the binary on MacOS, you need to disable some security features. If you don't wish to do so, use the above method. If you're okay with enabling running unsigned code (which in my opinion is an extremely minimal security issue) then open a new Terminal and run:
+
+`sudo spctl --master-disable`
+
+Once you've done that, run the program with the following steps:
+
+1) Open a new terminal
+2) type `cd` then drag in the folder of the MacOS build
+3) Check that you did that correctly. Type `ls`, hit Enter and you should see Avalonia.MetaMaskRecoverer as an item being listed. If not, read step 2 again carefully and ensure you are using the correct folder (unzip first)
+4) Type `./Avalonia.MetaMaskRecoverer` and hit Enter. The program should start. 
+5) Enjoy! Hopefully this can help you out. If not, try another tool. If you like my efforts there is a donation address below. 
 
 # Formerly: MetaMask Seed Unscrambler. Now: MetaMask Seed Phrase Recovery Tool
 A tool for descrambling a MetaMask, Trust Wallet or any other 12-word BIP39 HD Seed Phrase and/or Finding the Private Key. Be careful when you use this program, and understand it might work for you and it might not, I won't know. You're using this at your own risk (which is minimal). It was helpful for me, so I decided to publish it for people with the same potential problem.
