@@ -26,7 +26,7 @@
                                 </Button>
                         </Grid>
                         
-                        <Button Click="Go_Clicked" Grid.Row="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Button Name="BtGo" IsEnabled="False" Click="Go_Clicked" Grid.Row="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                 Go
                         </Button>
                 </Grid>

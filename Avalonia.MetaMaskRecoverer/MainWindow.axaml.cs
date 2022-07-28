@@ -42,7 +42,7 @@ namespace Avalonia.MetaMaskRecoverer
         
         private async void ValidateSeedPhrase_Clicked(object? sender, RoutedEventArgs e)
         {
-            if (TbSeedPhrase is not null)
+            if (TbSeedPhrase is null)
                 return;
             if (TbSeedPhrase!.Text is "")
                 return; // TODO Popup
@@ -57,13 +57,18 @@ namespace Avalonia.MetaMaskRecoverer
                 throw new Exception("Words list was empty and therefore corrupted");
 
             if (VerifyAllExist(words, TbSeedPhrase.Text.Split(' ')))
-                await SayVerified(500);
+            {
+                await SetButtonTextForTime(5000, "Verified ✅");
+                BtGo.IsEnabled = TbWalletAddress.Text is not null;
+            }
+            else
+                await SetButtonTextForTime(5000, "Incorrect ❌");
         }
 
-        private async Task SayVerified(int milliseconds)
+        private async Task SetButtonTextForTime(int milliseconds, string message)
         {
             var preContent = (string)BtCheckValidity.Content;
-            BtCheckValidity.Content = "Verified ✅";
+            BtCheckValidity.Content = message;
 
             await Task.Delay(milliseconds);
 
