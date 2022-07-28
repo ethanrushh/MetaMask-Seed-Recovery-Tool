@@ -10,7 +10,7 @@ then
 
 from the project folder. If you've done it right, after a few seconds you'll see the program start and you can start using it as normal.
 
-# MetaMask Seed Unscrambler
+# Formerly: MetaMask Seed Unscrambler. Now: MetaMask Seed Phrase Recovery Tool
 A tool for descrambling a MetaMask, Trust Wallet or any other 12-word BIP39 HD Seed Phrase and/or Finding the Private Key. Be careful when you use this program, and understand it might work for you and it might not, I won't know. You're using this at your own risk (which is minimal). It was helpful for me, so I decided to publish it for people with the same potential problem.
 
 Although this is only built for Linux (my host OS), this can be run on anything that supports Omnisharp and VSCode. Yes, this includes Windows and MacOS (with a huge asterisk).
