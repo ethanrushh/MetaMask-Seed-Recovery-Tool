@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nethereum.HdWallet;
+using Erdcsharp.Domain;
 
 namespace Avalonia.MetaMaskRecoverer;
 
 public class Worker
 {
-    private static bool finishedPermute = false;
+    private static bool _finishedPermute = false;
     
     public static Tuple<bool, string, string> AttemptRecovery(IEnumerable<string> words, string walletAddress)
     {
-        finishedPermute = false;
+        _finishedPermute = false;
         var result = new Tuple<bool, string, string>(false, "", "");
         
         var enumerable = words as string[] ?? words.ToArray();
@@ -23,15 +23,15 @@ public class Worker
             var thisAttempt = string.Join(" ", perm.Where(x => !string.IsNullOrEmpty(x)));
             try
             {
-                var wallet = new Wallet(thisAttempt, "");
+                var wallet = Wallet.DeriveFromMnemonic(thisAttempt);
 
-                if (!string.Equals(wallet.GetAddresses(1)[0], walletAddress,
+                if (!string.Equals(wallet.GetAccount().Address.ToString(), walletAddress,
                         StringComparison.CurrentCultureIgnoreCase)) return;
                 
                 Console.WriteLine("Found at " + thisAttempt);
                     
-                result = new Tuple<bool, string, string>(true, thisAttempt, wallet.GetPrivateKey(0).ToString() ?? "");
-                finishedPermute = true;
+                result = new Tuple<bool, string, string>(true, thisAttempt, wallet.GetPrivateKey().ToString() ?? "");
+                _finishedPermute = true;
 
             }
             catch (Exception ex) { Console.WriteLine($"Failed to assess {thisAttempt} because {ex.Message}"); }
@@ -66,7 +66,7 @@ public class Worker
     {
         for (var i = 0; i < items.Length; ++i)
         {
-            if (finishedPermute)
+            if (_finishedPermute)
                 return;
             
             if (used[i]) continue;
