@@ -62,6 +62,6 @@ I haven't compiled this for MacOS because I haven't dug up my old iMac in a whil
 If you find this program useful, please consider chipping me a little bit of your recovered coin...
 
 ### BSC/ETH/MATIC
-0x2F50B7A73D7065a672bB0eb97fB4e3DAb391CC23
+0xeDEEB0EF2F166a8Db85BC18D0eD9F1022587171A
 
 Thanks!
