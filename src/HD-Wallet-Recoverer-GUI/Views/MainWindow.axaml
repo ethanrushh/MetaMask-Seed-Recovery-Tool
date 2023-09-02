@@ -11,7 +11,9 @@
         MinHeight="450"
         MinWidth="400"
         MaxHeight="550"
-        MaxWidth="500">
+        MaxWidth="500"
+        Height="450"
+        Width="400">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
