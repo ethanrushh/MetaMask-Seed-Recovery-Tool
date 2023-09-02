@@ -1,0 +1,84 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:HD_Wallet_Recoverer_GUI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400"
+        x:Class="HD_Wallet_Recoverer_GUI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/icon.png"
+        Title="Wallet Recovery"
+        MinHeight="450"
+        MinWidth="400">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <DockPanel>
+        <!-- STEP ONE -->
+        <Grid IsVisible="{Binding StepOneVisible}" ColumnDefinitions="*" RowDefinitions="20, *, Auto, Auto, 20">
+            <TextBlock Grid.Row="1" TextWrapping="Wrap" Padding="20">This software comes with absolutely no warranty or guarantees. USE AT YOUR OWN RISK. I understand the conditions of use and agree not to use this for commercial purposes without a license.</TextBlock>
+            
+            <CheckBox Grid.Row="2" HorizontalAlignment="Center" IsChecked="{Binding EulaAgreeChecked}">I have read and agree</CheckBox>
+            <Button Grid.Row="3" Command="{Binding NextStepCommand}" HorizontalAlignment="Center" IsEnabled="{Binding EulaAgreeChecked}">Next Step</Button>
+        </Grid>
+        
+        
+        <!-- STEP TWO -->
+        <Grid IsVisible="{Binding StepTwoVisible}" ColumnDefinitions="*" RowDefinitions="20, Auto, Auto, *, Auto, 20">
+            <TextBlock Grid.Row="1" TextWrapping="Wrap" Padding="20">Please enter the words in your seed phrase. The more accurate the order is, the faster the program will find it if the words are correct. You can use tab to navigate to the next word box</TextBlock>
+            
+            <TextBox Grid.Row="2" Text="{Binding TargetWalletAddress}" HorizontalAlignment="Stretch" Margin="25 0" Watermark="Target Address (0x...)"></TextBox>
+            
+            <Grid Grid.Row="3" ColumnDefinitions="20, *, *, *, 20">
+                <StackPanel Grid.Column="1">
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 1" Text="{Binding Word1}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 2" Text="{Binding Word2}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 3" Text="{Binding Word3}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 4" Text="{Binding Word4}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 5" Text="{Binding Word5}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 6" Text="{Binding Word6}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 7" Text="{Binding Word7}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 8" Text="{Binding Word8}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 9" Text="{Binding Word9}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 10" Text="{Binding Word10}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 11" Text="{Binding Word11}"/>
+                    <TextBox Margin="5" HorizontalAlignment="Stretch" Watermark="Word 12" Text="{Binding Word12}"/>
+                </StackPanel>
+            </Grid>
+            
+            <Button Grid.Row="4" HorizontalAlignment="Center" Command="{Binding NextStepCommand}">Next Step</Button>
+        </Grid>
+        
+        
+        <!-- STEP THREE -->
+        <Grid IsVisible="{Binding StepThreeVisible}" ColumnDefinitions="*" RowDefinitions="20, *, Auto, 20">
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" TextWrapping="Wrap" Padding="20">Checking for a match. This may take a very long time (hours or days) depending on your system and luck.</TextBlock>
+
+            <!-- Default is set in script -->
+            <TextBlock Grid.Row="2" TextWrapping="Wrap" HorizontalAlignment="Center" Text="{Binding PermutationCompletionText}"/>
+        </Grid>
+        
+        <!-- STEP FOUR -->
+        <Grid IsVisible="{Binding StepFourVisible}" ColumnDefinitions="*" RowDefinitions="20, Auto, 20, Auto, Auto, 20">
+            <TextBlock HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Padding="20">Finished</TextBlock>
+            
+            <TextBlock HorizontalAlignment="Center" Grid.Row="3">Your seed phrase is:</TextBlock>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Grid.Row="4" Text="{Binding FoundSeedPhrase}" Margin="20"/>
+        </Grid>
+        
+        <!-- STEP FIVE -->
+        <Grid IsVisible="{Binding StepFiveVisible}" ColumnDefinitions="*" RowDefinitions="20, Auto, Auto, Auto, 20">
+            <TextBlock HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Padding="20">Failed to find seed phrase</TextBlock>
+            
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Grid.Row="2">Either this seed phrase is not correct for this wallet or one of the words is incorrect and recovery is highly implausible. If you would like further help, please create an issue on GitHub and I will do my best to help out.</TextBlock>
+        </Grid>
+    </DockPanel>
+</Window>
