@@ -9,7 +9,9 @@
         Icon="/Assets/icon.png"
         Title="Wallet Recovery"
         MinHeight="450"
-        MinWidth="400">
+        MinWidth="400"
+        MaxHeight="550"
+        MaxWidth="500">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
