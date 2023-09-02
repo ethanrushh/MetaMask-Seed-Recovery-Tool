@@ -116,9 +116,8 @@ public class MainWindowViewModel : WordBoxStorage
             {
                 Task.Factory.StartNew(() =>
                 {
-                    var (found, result) = /*_computationEngine.FindAddressFromWords(GetAllWords(), TargetWalletAddress,
-                        x => PermutationCompletionText = x);*/
-                        (false, new string[12]);
+                    var (found, result) = _computationEngine.FindAddressFromWords(GetAllWords(), TargetWalletAddress,
+                        x => PermutationCompletionText = x);
 
                     SetAllStepsInvisible();
                     
